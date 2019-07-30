@@ -1,19 +1,24 @@
 package com.bootcamp.ejercicio1.core.characters;
 
-public class Elfo {
-    public int ataqueElfo = 4;
-    public int agilidadElfo = 8;
-    public int defensaElfo = 8;
-    public int magiaElfo = 8;
-    public int vidaElfo = 6;
+public class Elfo extends Personaje {
+    private int ataque;
+    private int agilidad;
+    private int defensa;
+    private int magia;
+    private int vida ;
 
-    public String nombreElfo;
+    private String nombre;
+    private int edad;
+    private char sexo;
 
-    public Elfo(String nombreElfo) {
-        this.nombreElfo = nombreElfo;
-    }
-
-    public String getElfName() {
-        return this.nombreElfo;
+    public Elfo(String nombre, int edad, char sexo) {
+        setNombre(nombre);
+		setEdad(edad);
+		setSexo(sexo);
+		setVida(6);
+		setAgilidad(8);
+		setDefensa(4);
+		setMagia(8);
+		setAtaque(4);
     }
 }

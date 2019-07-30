@@ -1,19 +1,24 @@
 package com.bootcamp.ejercicio1.core.characters;
 
-public class Enano {
-    public int ataqueEnano = 8;
-    public int agilidadEnano = 4;
-    public int defensaEnano = 6;
-    public int magiaEnano = 4;
-    public int vidaEnano = 6;
+public class Enano extends Personaje {
+    private int ataque;
+    private int agilidad;
+    private int defensa;
+    private int magia;
+    private int vida ;
 
-    public String nombreEnano;
+    private String nombre;
+    private int edad;
+    private char sexo;
 
-    public Enano(String nombreEnano) {
-        this.nombreEnano = nombreEnano;
-    }
-
-    public String getDwarfName() {
-        return this.nombreEnano;
+    public Enano(String nombre, int edad, char sexo) {
+        setNombre(nombre);
+		setEdad(edad);
+		setSexo(sexo);
+		setVida(6);
+		setAgilidad(4);
+		setDefensa(6);
+		setMagia(4);
+		setAtaque(8);
     }
 }
