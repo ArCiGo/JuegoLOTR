@@ -31,6 +31,8 @@ public class Presets {
         arquero.put("Ataque", 3);
 		arquero.put("Defensa", -1);
         arquero.put("Agilidad", 3);
+        arquero.put("Magia", 0);
+        arquero.put("Vida", 0);
         
         presets.put("Mago", mago);
 		presets.put("Guerrero", guerrero);

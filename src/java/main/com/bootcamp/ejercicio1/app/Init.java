@@ -46,7 +46,7 @@ public class Init {
 		personaje2.ataque(personaje1, personaje3);
 		personaje3.ataque(personaje2, personaje1);
         personaje1.ataque(personaje2);*/
-        
+
         IniciarJuego ini1 = new IniciarJuego();
         Personaje per1 = ini1.crearPersonaje("Humano", "Mago", "Armando", 27, 'H');
 
