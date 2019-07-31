@@ -7,6 +7,17 @@ import com.bootcamp.ejercicio1.core.characters.Humano;
 import com.bootcamp.ejercicio1.core.characters.Personaje;
 
 public class IniciarJuego {
+
+    private static IniciarJuego iniciarJuego;
+
+    public static IniciarJuego getInstance() {
+        if(iniciarJuego == null) {
+            iniciarJuego = new IniciarJuego();
+        }
+
+        return iniciarJuego;
+    }
+
     public Personaje crearPersonaje(String raza, String clase, String nombre, int edad, char sexo) {
         Presets pre = Presets.getInstance();
         Personaje personaje = null;

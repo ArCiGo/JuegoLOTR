@@ -47,20 +47,17 @@ public class Init {
 		personaje3.ataque(personaje2, personaje1);
         personaje1.ataque(personaje2);*/
 
-        IniciarJuego ini1 = new IniciarJuego();
-        Personaje per1 = ini1.crearPersonaje("Humano", "Mago", "Armando", 27, 'H');
+        IniciarJuego iniciarJuego = IniciarJuego.getInstance();
 
-        IniciarJuego ini2 = new IniciarJuego();
-        Personaje per2 = ini2.crearPersonaje("Humano", "Guerrero", "Jesús", 21, 'H');
-
-        IniciarJuego ini3 = new IniciarJuego();
-        Personaje per3 = ini3.crearPersonaje("Elfo", "Mago", "Paola", 21, 'M');
-
-        per1.ataque(per2, per3);
-        per2.ataque(per1, per3);
-        per3.ataque(per2, per1);
-        per1.ataque(per2);
-
-        System.out.println("Finalizó el juego");
+        Personaje personaje1 = iniciarJuego.crearPersonaje("Humano", "Arquero", "Jesús", 27, 'H');
+		Personaje personaje2 = iniciarJuego.crearPersonaje("Enano", "Guerrero", "Carlos", 20, 'H');
+        Personaje personaje3 = iniciarJuego.crearPersonaje("Elfo", "Mago", "Mayra", 19, 'M');
+        
+        personaje1.ataque(personaje2, personaje3);
+		personaje2.ataque(personaje1, personaje3);
+		personaje3.ataque(personaje2, personaje1);
+        personaje1.ataque(personaje2);
+        
+        System.out.println("Se acabó el juego");
     }
 }

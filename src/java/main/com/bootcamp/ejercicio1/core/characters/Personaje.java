@@ -128,25 +128,35 @@ public class Personaje {
     }
 
     public void ataque(Personaje... personajes) {
-        int ataqueTotal = this.ataque();
+        if(this.vida > 0) {
+            int ataqueTotal = this.ataque();
 
-        for(Personaje item : personajes) {
-            System.out.println("El personaje: " + this.nombre + " atacó a: " + item.nombre);
-
-            if(item.vida <= 0) {
-                System.out.println("El personaje: " + item.nombre + " está muerto");
-            } else {
-                item.defender(ataqueTotal, this);
-
-                System.out.println("La vida restante del personaje: " + item.nombre + " es: " + item.vida);
+            for(Personaje item : personajes) {
+                System.out.println("El personaje: " + this.nombre + " atacó a: " + item.nombre);
+    
+                if(item.vida <= 0) {
+                    System.out.println("El personaje: " + item.nombre + " está muerto");
+                } else {
+                    item.defender(ataqueTotal, this);
+    
+                    if(item.vida >= 0) {
+                        System.out.println("La vida restante del personaje: " + item.nombre + " es: " + item.vida);
+                    }
+                }
             }
+        } else {
+            System.out.println(this.nombre + " estás muerto, ya no puedes atacar");
         }
     }
 
     public void defender(int ataqueTotal, Personaje personajeA) {
         int defensaTotal = this.defensa + this.agilidad;
 
-        this.vida = this.vida - (ataqueTotal - defensaTotal);
+        if(ataqueTotal > defensaTotal) {
+            this.vida = this.vida - (ataqueTotal - defensaTotal);
+        } else {
+            System.out.println(this.nombre + ": ¡Eres débil! No me haces nada");
+        }
 
         if(this.vida <= 0) {
             System.out.println("El personaje: " + this.nombre + " murió");

@@ -20,19 +20,19 @@ public class Presets {
 		mago.put("Magia", 5);
 		mago.put("Defensa", -1);
 		mago.put("Agilidad", -1);
-        mago.put("Vida", 1);
+		mago.put("Vida", 1);
         
         guerrero.put("Ataque", 3);
 		guerrero.put("Magia", -2);
 		guerrero.put("Defensa", 2);
 		guerrero.put("Agilidad", 1);
-        guerrero.put("Vida", 1);
+		guerrero.put("Vida", 1);
         
         arquero.put("Ataque", 3);
 		arquero.put("Defensa", -1);
-        arquero.put("Agilidad", 3);
-        arquero.put("Magia", 0);
-        arquero.put("Vida", 0);
+		arquero.put("Agilidad", 3);
+		arquero.put("Vida", 0);
+		arquero.put("Magia", 0);
         
         presets.put("Mago", mago);
 		presets.put("Guerrero", guerrero);
