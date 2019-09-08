@@ -1,6 +1,6 @@
 # LOTR
 
-###### QA Minds Bootcamp & Codeando México
+###### Bootcamp sponsored by QA Minds & Codeando México
 
 ## Opening the project
 
